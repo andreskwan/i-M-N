@@ -19,9 +19,9 @@
              @"color": @"color",
              @"faces": @"faces",
              @"story": @"description",
-//             @"body": @"reviews.body",
-//             @"stars": @"review.stars",
-//             @"author": @"review.author"
+             @"body": @"reviews.body",
+             @"stars": @"reviews.stars",
+             @"author": @"reviews.author"
              };
 }
 @end

@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ProdutsModel.h"
 
-static NSString* const kBaseURL = @"http://localhost:3000/productos/553799aefa2899b678062887";
+static NSString* const kBaseURL = @"http://localhost:3000/productos/5537c72f231259e95dcfa7e0";
 
 @interface ViewController ()
 

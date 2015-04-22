@@ -53,18 +53,23 @@ static NSString* const kBaseURL = @"http://localhost:3000/productos/553799aefa28
                NSDictionary *restDict = [NSJSONSerialization JSONObjectWithData:data
                                                                         options:0
                                                                           error:&error];
+               NSArray * restArray    = restDict[@"productos"];
                NSDictionary *jsonDict = [restDict[@"productos"] firstObject];
                NSError *jsonError = nil;
-               ProdutsModel * productModel = [MTLJSONAdapter modelOfClass:[ProdutsModel class] fromJSONDictionary:jsonDict error:&jsonError];
+               
+//               ProdutsModel * productModel = [MTLJSONAdapter modelOfClass:[ProdutsModel class] fromJSONDictionary:jsonDict error:&jsonError];
+               NSArray * productsModels = [MTLJSONAdapter modelsOfClass:[ProdutsModel class] fromJSONArray:restArray error:&error];
                
                NSLog(@"Error: %@",jsonError);
                NSLog(@"jsonDict: %@",jsonDict);
-               NSLog(@"ProductModel.description: %@",productModel);
+//               NSLog(@"ProductModel.description: %@",productModel);
                
-               for (id obj in jsonDict)
+//               for (id obj in jsonDict)
+               for (id obj in productsModels)
                {
                    //here obj is a dictionary too
                    NSLog(@"obj class:%@", [obj class]);
+                   NSLog(@"obj: %@", obj);
                }
            }
        }];

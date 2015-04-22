@@ -1,0 +1,59 @@
+{
+      "producto":{
+        "name": "Zircon",
+        "description": "Zircon is our most coveted and sought after gem. You will pay much to be the proud owner of this gorgeous and high shine gem.",
+        "shine": 70,
+        "price": 1100,
+        "rarity": 2,
+        "color": "#000",
+        "faces": 6,
+        "images": [
+            "images/gem-06.gif",
+            "images/gem-07.gif",
+            "images/gem-08.gif"
+        ],
+        "reviews": [
+            {
+                "stars": 1,
+                "body": "This gem is WAY too expensive for its rarity value.",
+                "author": "turtleguyy@example.org"
+            },
+            {
+                "stars": 1,
+                "body": "BBW: High Shine != High Quality.",
+                "author": "LouisW407@example.org"
+            },
+            {
+                "stars": 1,
+                "body": "Don't waste your rubles!",
+                "author": "nat@example.org"
+            }
+        ]
+    }
+}
+
+@property (nonatomic, strong) NSString *name;
+@property (nonatomic, strong) NSString *description;
+@property (nonatomic, strong) NSNumber *shine;
+@property (nonatomic, strong) NSNumber *price;
+@property (nonatomic, strong) NSNumber *rarity;
+@property (nonatomic, strong) NSString *color;
+@property (nonatomic, strong) NSNumber *faces;
+@property (nonatomic, strong) NSNumber *stars;
+@property (nonatomic, strong) NSString *body;
+@property (nonatomic, strong) NSString *author;
+
+        @"name": @"",
+        @"shine": @"",
+        @"price": @"",
+        @"rarity": @"",
+        @"color": @"",
+        @"faces": @"",
+        @"story": @"description",
+        @"body": @"reviews.body",
+        @"stars": @"review.stars",
+        @"author": @"review.author",
+        @"": @"",
+        @"": @"",
+ 
+

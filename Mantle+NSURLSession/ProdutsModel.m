@@ -10,4 +10,12 @@
 
 @implementation ProdutsModel
 
++ (NSDictionary *)JSONKeyPathsByPropertyKey {
+    return @{
+             @"story": @"description",
+             @"body": @"reviews.body",
+             @"stars": @"review.stars",
+             @"author": @"review.author"
+             };
+}
 @end

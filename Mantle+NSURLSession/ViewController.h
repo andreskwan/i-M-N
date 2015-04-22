@@ -11,5 +11,6 @@
 @interface ViewController : UIViewController
 
 
+- (IBAction)getButton:(UIButton *)sender;
 @end
 

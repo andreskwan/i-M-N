@@ -19,9 +19,7 @@
              NSStringFromSelector(@selector(color)) : @"color",
              NSStringFromSelector(@selector(faces)) : @"faces",
              NSStringFromSelector(@selector(story)) : @"description",
-             NSStringFromSelector(@selector(body)) : @"reviews.body",
-             NSStringFromSelector(@selector(stars)) : @"reviews.stars",
-             NSStringFromSelector(@selector(author)) : @"reviews.author"
-             };
+             NSStringFromSelector(@selector(reviewModel)) : @"reviews"
+            };
 }
 @end

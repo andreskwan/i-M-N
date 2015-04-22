@@ -28,14 +28,9 @@ static NSString* const kBaseURL = @"http://localhost:3000/productos/5537c72f2312
 }
 
 - (IBAction)getButton:(UIButton *)sender {
-    NSLog(@"Button pressed");
-    //Warning: REST add URL to persist data
+    NSLog(@"Button pressed");    //Warning: REST add URL to persist data
     NSURL* url = [NSURL URLWithString:kBaseURL];
-    
-    //    #warning REST create the request with the url
     NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:url];
-    //    #warning REST PUT update or POST create
-    //    request.HTTPMethod = isExistingLocation ? @"PUT" : @"POST"; //2
     request.HTTPMethod =@"GET";
     [request addValue:@"application/json" forHTTPHeaderField:@"Accept"]; //4
     

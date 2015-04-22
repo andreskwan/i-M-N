@@ -16,6 +16,7 @@
 		EAC1438B1AE7B93600C84B95 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = EAC1438A1AE7B93600C84B95 /* Images.xcassets */; };
 		EAC1438E1AE7B93600C84B95 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = EAC1438C1AE7B93600C84B95 /* LaunchScreen.xib */; };
 		EAC1439A1AE7B93700C84B95 /* Mantle_NSURLSessionTests.m in Sources */ = {isa = PBXBuildFile; fileRef = EAC143991AE7B93700C84B95 /* Mantle_NSURLSessionTests.m */; };
+		EACD5C201AE8374E00B80E95 /* ReviewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = EACD5C1F1AE8374E00B80E95 /* ReviewModel.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,8 @@
 		EAC143931AE7B93700C84B95 /* Mantle+NSURLSessionTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Mantle+NSURLSessionTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAC143981AE7B93700C84B95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		EAC143991AE7B93700C84B95 /* Mantle_NSURLSessionTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mantle_NSURLSessionTests.m; sourceTree = "<group>"; };
+		EACD5C1E1AE8374E00B80E95 /* ReviewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReviewModel.h; sourceTree = "<group>"; };
+		EACD5C1F1AE8374E00B80E95 /* ReviewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReviewModel.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,6 +121,8 @@
 				EAC1437D1AE7B93600C84B95 /* Supporting Files */,
 				EA0D5E0C1AE7C23600FEB0BC /* ProdutsModel.h */,
 				EA0D5E0D1AE7C23600FEB0BC /* ProdutsModel.m */,
+				EACD5C1E1AE8374E00B80E95 /* ReviewModel.h */,
+				EACD5C1F1AE8374E00B80E95 /* ReviewModel.m */,
 			);
 			path = "Mantle+NSURLSession";
 			sourceTree = "<group>";
@@ -287,6 +292,7 @@
 				EAC143831AE7B93600C84B95 /* AppDelegate.m in Sources */,
 				EAC143801AE7B93600C84B95 /* main.m in Sources */,
 				EA0D5E0E1AE7C23600FEB0BC /* ProdutsModel.m in Sources */,
+				EACD5C201AE8374E00B80E95 /* ReviewModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

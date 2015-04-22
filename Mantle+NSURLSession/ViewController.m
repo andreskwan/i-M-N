@@ -49,32 +49,26 @@ static NSString* const kBaseURL = @"http://localhost:3000/productos/5537c72f2312
     [session dataTaskWithRequest:request
        completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { //5
            if (error == nil) {
-               NSError *error;
+               NSError *restError = nil;
                NSDictionary *restDict = [NSJSONSerialization JSONObjectWithData:data
                                                                         options:0
-                                                                          error:&error];
+                                                                          error:&restError];
                NSArray * restArray    = restDict[@"productos"];
                NSDictionary *jsonDict = [restDict[@"productos"] firstObject];
                NSError *jsonError = nil;
                
 //               ProdutsModel * productModel = [MTLJSONAdapter modelOfClass:[ProdutsModel class] fromJSONDictionary:jsonDict error:&jsonError];
-               NSArray * productsModels = [MTLJSONAdapter modelsOfClass:[ProdutsModel class] fromJSONArray:restArray error:&error];
+               NSArray * productsModels = [MTLJSONAdapter modelsOfClass:[ProdutsModel class] fromJSONArray:restArray error:&restError];
                
                NSLog(@"Error: %@",jsonError);
                NSLog(@"jsonDict: %@",jsonDict);
-//               NSLog(@"ProductModel.description: %@",productModel);
-               
-//               for (id obj in jsonDict)
                for (id obj in productsModels)
                {
-                   //here obj is a dictionary too
                    NSLog(@"obj class:%@", [obj class]);
                    NSLog(@"obj: %@", obj);
                }
            }
        }];
     [dataTask resume]; //8
-//    self.label.text = [self.dict1 objectForKey:@"title"];
-//    self.label.text = [self.dict1 objectForKey:@"title"];
 }
 @end

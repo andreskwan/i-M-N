@@ -12,16 +12,16 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"name": @"name",
-             @"shine": @"shine",
-             @"price": @"price",
-             @"rarity": @"rarity",
-             @"color": @"color",
-             @"faces": @"faces",
-             @"story": @"description",
-             @"body": @"reviews.body",
-             @"stars": @"reviews.stars",
-             @"author": @"reviews.author"
+             NSStringFromSelector(@selector(name)) : @"name",
+             NSStringFromSelector(@selector(shine)) : @"shine",
+             NSStringFromSelector(@selector(price)) : @"price",
+             NSStringFromSelector(@selector(rarity)) : @"rarity",
+             NSStringFromSelector(@selector(color)) : @"color",
+             NSStringFromSelector(@selector(faces)) : @"faces",
+             NSStringFromSelector(@selector(story)) : @"description",
+             NSStringFromSelector(@selector(body)) : @"reviews.body",
+             NSStringFromSelector(@selector(stars)) : @"reviews.stars",
+             NSStringFromSelector(@selector(author)) : @"reviews.author"
              };
 }
 @end

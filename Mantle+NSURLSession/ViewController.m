@@ -9,7 +9,7 @@
 #import "ViewController.h"
 #import "ProdutsModel.h"
 
-static NSString* const kBaseURL = @"http://localhost:3000/productos/553784f9fa2899b67806287f";
+static NSString* const kBaseURL = @"http://localhost:3000/productos/553799aefa2899b678062887";
 
 @interface ViewController ()
 
@@ -47,45 +47,27 @@ static NSString* const kBaseURL = @"http://localhost:3000/productos/553784f9fa28
     
     NSURLSessionDataTask* dataTask =
     [session dataTaskWithRequest:request
-               completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { //5
-                   if (error == nil) {
-                       NSError *error;
-                       NSDictionary *restDict = [NSJSONSerialization JSONObjectWithData:data
-                                                                                options:0
-                                                                                  error:&error];
-//                       NSArray * arrayOfDict  = restDict[@"productos"];
-                       NSDictionary *jsonDict = [restDict[@"productos"] firstObject];
-//                       this is a ProdutsModel
-                       NSError *jsonError = nil;
-                       ProdutsModel * productModel = [MTLJSONAdapter modelOfClass:[ProdutsModel class] fromJSONDictionary:jsonDict error:&jsonError];
-                       
-                       NSLog(@"Error: %@",jsonError);
-                       NSLog(@"ProductModel.description: %@",productModel);
-                       
-                       for (id obj in jsonDict)
-                       {
-//                           self.dict1 = obj;
-                           //here obj is a dictionary too
-                           NSLog(@"obj class:%@", [obj class]);
-                           //                NSLog(@"objt: %@",obj);
-                           //                i+=1;
-                           //                //here obj is a key of the obj dictionary
-//                                           for (id obj2 in obj) {
-//                                             NSLog(@"obj2 class:%@", [obj2 class]);
-                           //                    NSLog(@"\nobj2 key: %@\n",obj2);
-                           //                    NSLog(@"obj2 value: %@", [obj objectForKey:obj2]);
-                           //
-//                                           }
-                       }
-                       
-                       //            NSLog(@"%@", );
-                       //             NSArray* responseArray = [NSJSONSerialization JSONObjectWithData:data options:0 error:NULL];
-                       //            if ([responseArray count])
-                       //            {
-                       //                self.label.text = [jsonDict objectForKey:<#(id)#>;
-                       //            }
-                   }
-               }];
+       completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { //5
+           if (error == nil) {
+               NSError *error;
+               NSDictionary *restDict = [NSJSONSerialization JSONObjectWithData:data
+                                                                        options:0
+                                                                          error:&error];
+               NSDictionary *jsonDict = [restDict[@"productos"] firstObject];
+               NSError *jsonError = nil;
+               ProdutsModel * productModel = [MTLJSONAdapter modelOfClass:[ProdutsModel class] fromJSONDictionary:jsonDict error:&jsonError];
+               
+               NSLog(@"Error: %@",jsonError);
+               NSLog(@"jsonDict: %@",jsonDict);
+               NSLog(@"ProductModel.description: %@",productModel);
+               
+               for (id obj in jsonDict)
+               {
+                   //here obj is a dictionary too
+                   NSLog(@"obj class:%@", [obj class]);
+               }
+           }
+       }];
     [dataTask resume]; //8
 //    self.label.text = [self.dict1 objectForKey:@"title"];
 //    self.label.text = [self.dict1 objectForKey:@"title"];

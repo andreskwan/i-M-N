@@ -18,7 +18,7 @@
              @"rarity": @"rarity",
              @"color": @"color",
              @"faces": @"faces",
-             @"story": @"description"
+             @"story": @"description",
 //             @"body": @"reviews.body",
 //             @"stars": @"review.stars",
 //             @"author": @"review.author"

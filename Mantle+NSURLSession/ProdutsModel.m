@@ -12,10 +12,16 @@
 
 + (NSDictionary *)JSONKeyPathsByPropertyKey {
     return @{
-             @"story": @"description",
-             @"body": @"reviews.body",
-             @"stars": @"review.stars",
-             @"author": @"review.author"
+             @"name": @"name",
+             @"shine": @"shine",
+             @"price": @"price",
+             @"rarity": @"rarity",
+             @"color": @"color",
+             @"faces": @"faces",
+             @"story": @"description"
+//             @"body": @"reviews.body",
+//             @"stars": @"review.stars",
+//             @"author": @"review.author"
              };
 }
 @end

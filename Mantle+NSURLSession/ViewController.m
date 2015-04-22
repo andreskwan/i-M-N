@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "ProdutsModel.h"
+
 static NSString* const kBaseURL = @"http://localhost:3000/productos/553784f9fa2899b67806287f";
 
 @interface ViewController ()
@@ -48,9 +50,18 @@ static NSString* const kBaseURL = @"http://localhost:3000/productos/553784f9fa28
                completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) { //5
                    if (error == nil) {
                        NSError *error;
-                       NSDictionary *jsonDict = [NSJSONSerialization JSONObjectWithData:data
+                       NSDictionary *restDict = [NSJSONSerialization JSONObjectWithData:data
                                                                                 options:0
                                                                                   error:&error];
+//                       NSArray * arrayOfDict  = restDict[@"productos"];
+                       NSDictionary *jsonDict = [restDict[@"productos"] firstObject];
+//                       this is a ProdutsModel
+                       NSError *jsonError = nil;
+                       ProdutsModel * productModel = [MTLJSONAdapter modelOfClass:[ProdutsModel class] fromJSONDictionary:jsonDict error:&jsonError];
+                       
+                       NSLog(@"Error: %@",jsonError);
+                       NSLog(@"ProductModel.description: %@",productModel);
+                       
                        for (id obj in jsonDict)
                        {
 //                           self.dict1 = obj;

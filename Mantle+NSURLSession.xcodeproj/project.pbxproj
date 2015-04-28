@@ -88,6 +88,17 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C98026981AEFDF3400732047 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				EA0D5E0C1AE7C23600FEB0BC /* ProdutsModel.h */,
+				EA0D5E0D1AE7C23600FEB0BC /* ProdutsModel.m */,
+				EACD5C1E1AE8374E00B80E95 /* ReviewModel.h */,
+				EACD5C1F1AE8374E00B80E95 /* ReviewModel.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		EAC143711AE7B93600C84B95 = {
 			isa = PBXGroup;
 			children = (
@@ -111,18 +122,13 @@
 		EAC1437C1AE7B93600C84B95 /* Mantle+NSURLSession */ = {
 			isa = PBXGroup;
 			children = (
-				EAC143811AE7B93600C84B95 /* AppDelegate.h */,
-				EAC143821AE7B93600C84B95 /* AppDelegate.m */,
 				EAC143841AE7B93600C84B95 /* ViewController.h */,
 				EAC143851AE7B93600C84B95 /* ViewController.m */,
 				EAC143871AE7B93600C84B95 /* Main.storyboard */,
 				EAC1438A1AE7B93600C84B95 /* Images.xcassets */,
 				EAC1438C1AE7B93600C84B95 /* LaunchScreen.xib */,
 				EAC1437D1AE7B93600C84B95 /* Supporting Files */,
-				EA0D5E0C1AE7C23600FEB0BC /* ProdutsModel.h */,
-				EA0D5E0D1AE7C23600FEB0BC /* ProdutsModel.m */,
-				EACD5C1E1AE8374E00B80E95 /* ReviewModel.h */,
-				EACD5C1F1AE8374E00B80E95 /* ReviewModel.m */,
+				C98026981AEFDF3400732047 /* Model */,
 			);
 			path = "Mantle+NSURLSession";
 			sourceTree = "<group>";
@@ -130,6 +136,8 @@
 		EAC1437D1AE7B93600C84B95 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				EAC143811AE7B93600C84B95 /* AppDelegate.h */,
+				EAC143821AE7B93600C84B95 /* AppDelegate.m */,
 				EAC1437E1AE7B93600C84B95 /* Info.plist */,
 				EAC1437F1AE7B93600C84B95 /* main.m */,
 			);

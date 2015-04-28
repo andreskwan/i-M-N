@@ -19,6 +19,6 @@
 @property (nonatomic, strong) NSNumber *rarity;
 @property (nonatomic, strong) NSString *color;
 @property (nonatomic, strong) NSNumber *faces;
-@property (nonatomic, strong) ReviewModel *reviewModel;
+@property (nonatomic, strong) NSArray  *reviewModel;
 
 @end

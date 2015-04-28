@@ -8,8 +8,9 @@
 
 #import "ViewController.h"
 #import "ProdutsModel.h"
-
-static NSString* const kBaseURL = @"http://localhost:3000/productos/5537c72f231259e95dcfa7e0";
+//array 553fab17fcdb0af8a8af8dbe
+//dictionary 553929abb6d8be6c8969cbfd
+static NSString* const kBaseURL = @"http://localhost:3000/productos/553fab17fcdb0af8a8af8dbe";
 
 @interface ViewController ()
 
@@ -59,8 +60,18 @@ static NSString* const kBaseURL = @"http://localhost:3000/productos/5537c72f2312
                NSLog(@"jsonDict: %@",jsonDict);
                for (id obj in productsModels)
                {
-                   NSLog(@"obj class:%@", [obj class]);
-                   NSLog(@"obj: %@", obj);
+                   //I should identify the class too, to do the casting
+                   if ([obj class] == [ProdutsModel class]) {
+                       ProdutsModel * pm = (ProdutsModel *)obj;
+//                       NSLog(@"obj class:%@", [obj class]);
+                       NSLog(@"pm: %@", pm);
+                       //here I should identify the class too, to do the casting
+                       ReviewModel * rm   = [pm.reviewModel firstObject];
+                       ReviewModel * rmLo = [pm.reviewModel lastObject];
+//                       NSLog(@"[pm.reviewModel firstObject] %@", rm.body);
+                       NSLog(@"first rm: \n%@", rm.body);
+                       NSLog(@"last rm:  \n%@", rmLo.body);
+                   }
                }
            }
        }];

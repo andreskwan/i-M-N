@@ -22,4 +22,8 @@
              NSStringFromSelector(@selector(reviewModel)) : @"reviews"
             };
 }
+
++ (NSValueTransformer *)reviewModelJSONTransformer {
+    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:ReviewModel.class];
+}
 @end

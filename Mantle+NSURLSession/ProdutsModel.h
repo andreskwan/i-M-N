@@ -10,6 +10,13 @@
 #import <Mantle.h>
 #import "ReviewModel.h"
 
+
+typedef enum : NSUInteger {
+    GHIssueStateOpen,
+    GHIssueStateClosed
+} GHIssueState;
+
+
 @interface ProdutsModel : MTLModel <MTLJSONSerializing>
 
 @property (nonatomic, strong) NSString *name;
@@ -20,5 +27,6 @@
 @property (nonatomic, strong) NSString *color;
 @property (nonatomic, strong) NSNumber *faces;
 @property (nonatomic, strong) NSArray  *reviewModel;
+@property (nonatomic, assign, readonly) GHIssueState state;
 
 @end

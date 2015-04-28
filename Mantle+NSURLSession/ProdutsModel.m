@@ -19,11 +19,20 @@
              NSStringFromSelector(@selector(color)) : @"color",
              NSStringFromSelector(@selector(faces)) : @"faces",
              NSStringFromSelector(@selector(story)) : @"description",
-             NSStringFromSelector(@selector(reviewModel)) : @"reviews"
+             NSStringFromSelector(@selector(reviewModel)) : @"reviews",
+             NSStringFromSelector(@selector(state)) : @"state"
             };
+
 }
 
 + (NSValueTransformer *)reviewModelJSONTransformer {
-    return [NSValueTransformer mtl_JSONArrayTransformerWithModelClass:ReviewModel.class];
+    return     [MTLJSONAdapter arrayTransformerWithModelClass:ReviewModel.class];
+}
+
++ (NSValueTransformer *)stateJSONTransformer {
+    return [NSValueTransformer mtl_valueMappingTransformerWithDictionary:@{
+                                                                           @"open": @(GHIssueStateOpen),
+                                                                           @"closed": @(GHIssueStateClosed)
+                                                                           }];
 }
 @end

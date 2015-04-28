@@ -10,7 +10,7 @@
 #import "ProdutsModel.h"
 //array 553fab17fcdb0af8a8af8dbe
 //dictionary 553929abb6d8be6c8969cbfd
-static NSString* const kBaseURL = @"http://localhost:3000/productos/553fab17fcdb0af8a8af8dbe";
+static NSString* const kBaseURL = @"http://localhost:3000/productos/553fcb95fcdb0af8a8af8dd9";
 
 @interface ViewController ()
 
@@ -63,12 +63,10 @@ static NSString* const kBaseURL = @"http://localhost:3000/productos/553fab17fcdb
                    //I should identify the class too, to do the casting
                    if ([obj class] == [ProdutsModel class]) {
                        ProdutsModel * pm = (ProdutsModel *)obj;
-//                       NSLog(@"obj class:%@", [obj class]);
                        NSLog(@"pm: %@", pm);
                        //here I should identify the class too, to do the casting
                        ReviewModel * rm   = [pm.reviewModel firstObject];
                        ReviewModel * rmLo = [pm.reviewModel lastObject];
-//                       NSLog(@"[pm.reviewModel firstObject] %@", rm.body);
                        NSLog(@"first rm: \n%@", rm.body);
                        NSLog(@"last rm:  \n%@", rmLo.body);
                    }
